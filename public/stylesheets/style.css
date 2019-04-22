@@ -1,0 +1,37 @@
+body {
+  background: rgb(10, 25, 47);
+  font: 16px "Montserrat", Helvetica, Arial, sans-serif;
+  color: rgb(100, 255, 218);
+}
+
+.icon{
+  width: 4em;
+  height: 4em;
+}
+
+.icon-link{
+  padding: 0em !important;
+  margin-left: 2em;
+}
+
+.navbar{
+  background: rgb(10, 25, 47);
+}
+
+.nav-item{
+  margin: 1em 2em;
+}
+
+.nav-link{
+  font-size: 1em;
+  color: rgb(100, 255, 218) !important;
+}
+
+.jumbotron{
+  background: rgb(10, 25, 47);
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}

@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+    <div class="container">
+        <div class=jumbotron>
+            <h1>Blogs Page</h1>
+            <a class="btn btn-primary" href="/blog/new" role="button">Create New Blog</a>
+        </div>
+
+
+        <% blog.forEach((b) => { %>
+            <div class="container">
+                <div class="media">
+                    <img src="<%= b.image %>" class="align-self-start mr-3 icon" alt="">
+                    <div class="media-body">
+                        <a href="/blog/<%= b._id %>">
+                            <h3 class="mt-0"><%= b.title %> - <%= b.author %></h3>
+                        </a>
+                        <p><%= b.body %></p>    
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+
+
+<% include partials/footer %>

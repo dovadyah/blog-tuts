@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+    <div class="container">
+        <form action="/blog/<%= blog._id %>" method="POST">
+            <input type="hidden" name="_method" value="PUT" /> 
+            <div class="form-group">
+                <label for="BlogImageId">Enter Image URL</label>
+                <input type="text" class="form-control" name="blog[image]" id="BlogImageId" placeholder="Enter Image URL"  value="<%= blog.image %>" required>
+            </div>
+            <div class="form-group">
+                <label for="BlogTitleId">Title</label>
+                <input type="text" class="form-control" name="blog[title]" id="BlogTitleId" placeholder="Enter Title" value="<%= blog.title %>" required>
+            </div>
+            <div class="form-group">
+                <label for="BlogAuthorId">Author</label>
+                <input type="text" class="form-control" name="blog[author]" id="BlogAuthorId" placeholder="Enter Author" value="<%= blog.author %>" required>
+            </div>
+            <div class="form-group">
+                <label for="BlogBodyId">Write Your Blog Post:</label>
+                <textarea class="form-control" id="BlogBodyId" name="blog[body]" rows="10" required><%= blog.body %></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+<% include partials/footer %>

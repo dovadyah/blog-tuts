@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+    <div class="container">
+        <img src="<%= blog.image %>" class="" alt="">
+        <h1 class=""><%= blog.title %> - <%= blog.author %></h1>
+        <form action="/blog/<%= blog._id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE" /> 
+            <button type="submit" class="btn btn-danger">DELETE</button>
+        </form>
+        <a class="btn btn-primary" href="/blog/<%= blog._id %>/edit" role="button">Edit Blog</a>
+        <p><%= blog.date %></p>
+        <p><%= blog.body %></p>
+    </div>
+         
+
+
+<% include partials/footer %>
